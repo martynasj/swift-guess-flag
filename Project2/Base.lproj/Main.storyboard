@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3KB-Nd-QNX">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJO-XB-Tma">
+                                <rect key="frame" x="87" y="128" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ELh-uV-JJ6"/>
+                                    <constraint firstAttribute="height" constant="100" id="JZm-Sm-TTS"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="us"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aos-MC-FJA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UG3-8E-yoN">
+                                <rect key="frame" x="87" y="289" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="QLE-8H-Snz"/>
+                                    <constraint firstAttribute="width" constant="200" id="ydg-X9-UGD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="italy"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zh6-Jf-XVd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7G-f5-WRu">
+                                <rect key="frame" x="87" y="457" width="200" height="100"/>
+                                <state key="normal" title="Button" image="germany"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYg-a4-JcB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l7G-f5-WRu" firstAttribute="width" secondItem="UG3-8E-yoN" secondAttribute="width" id="HGn-i6-oqs"/>
+                            <constraint firstItem="UG3-8E-yoN" firstAttribute="top" secondItem="iJO-XB-Tma" secondAttribute="bottom" constant="61" id="K6U-31-cWX"/>
+                            <constraint firstItem="iJO-XB-Tma" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="P7y-ef-45K"/>
+                            <constraint firstItem="UG3-8E-yoN" firstAttribute="centerX" secondItem="iJO-XB-Tma" secondAttribute="centerX" id="ZoM-Qu-IYI"/>
+                            <constraint firstItem="l7G-f5-WRu" firstAttribute="centerX" secondItem="UG3-8E-yoN" secondAttribute="centerX" id="etK-3t-pmG"/>
+                            <constraint firstItem="iJO-XB-Tma" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jn7-DI-UWc"/>
+                            <constraint firstItem="l7G-f5-WRu" firstAttribute="height" secondItem="UG3-8E-yoN" secondAttribute="height" id="jyU-IY-nww"/>
+                            <constraint firstItem="l7G-f5-WRu" firstAttribute="top" secondItem="UG3-8E-yoN" secondAttribute="bottom" constant="68" id="zkw-j5-825"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MwD-IJ-hoY"/>
+                    <connections>
+                        <outlet property="button1" destination="iJO-XB-Tma" id="8CG-oW-Nwk"/>
+                        <outlet property="button2" destination="UG3-8E-yoN" id="Ow9-gH-Y4k"/>
+                        <outlet property="button3" destination="l7G-f5-WRu" id="qpW-Re-ekY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1136.5" y="359.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tki-CT-814">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3KB-Nd-QNX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tua-Tt-rGv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Qg9-5j-3We"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3u-x4-S8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="1020"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="germany" width="200" height="100"/>
+        <image name="italy" width="200" height="100"/>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>
